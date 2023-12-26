@@ -1,3 +1,7 @@
 git+https://github.com/OCA/openupgradelib.git@master
 unicodecsv
 unidecode
+cryptography==36.0.0
+xades==0.2.4
+xmlsig==0.1.9
+zeep
