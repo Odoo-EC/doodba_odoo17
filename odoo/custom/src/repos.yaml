@@ -822,12 +822,13 @@
     - origin 6ac9fc889ec739192e202925cec7bcef952a8125
 ./web:
   defaults:
-    depth: $DEPTH_DEFAULT
+    depth: 1000
   remotes:
     origin: https://github.com/OCA/web.git
   target: origin $ODOO_VERSION
   merges:
     - origin 0958651a9783c8db899db2b1767da90565bb74f8
+    - origin refs/pull/2684/head
 ./web-api:
   defaults:
     depth: $DEPTH_DEFAULT
