@@ -1,0 +1,13 @@
+
+
+[http.middlewares]
+  [http.middlewares.redirect-non-www-to-www.redirectRegex]
+    permanent = true
+    regex = "^https?://(?:www\\.)?(.+)"
+    replacement = "https://www.${1}"
+  [http.middlewares.redirectscheme-https.redirectScheme]
+    scheme = "https"
+    permanent = true
+  [http.middlewares.forceSecure.headers]
+    forceSTSHeader = true
+    sslRedirect = true

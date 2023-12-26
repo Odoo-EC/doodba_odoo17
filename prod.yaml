@@ -1,0 +1,103 @@
+version: "2.4"
+
+services:
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    restart: unless-stopped
+    hostname: "example.com"
+    env_file:
+      - .docker/odoo.env
+      - .docker/db-access.env
+    environment:
+      DB_FILTER: "odoo-ec"
+      DOODBA_ENVIRONMENT: "${DOODBA_ENVIRONMENT-prod}"
+      INITIAL_LANG: "es_EC"
+    depends_on:
+      - db
+    networks:
+      default:
+      inverseproxy_shared:
+    labels:
+      doodba.domain.main: "example.com"
+      traefik.enable: "true"
+      traefik.domain: "example.com"
+      traefik.forbiddenCrawlers-0.frontend.headers.customResponseHeaders:
+        "X-Robots-Tag:noindex, nofollow"
+      traefik.forbiddenCrawlers-0.frontend.rule: Host:example.com;Path:/web,/web/{anything:.*},/website/info,/website/info/{anything:.*}
+      traefik.main-0.frontend.rule: Host:example.com
+      traefik.longpolling-0.frontend.rule: Host:example.com;Path:/websocket,/websocket/{anything:.*}
+      traefik.longpolling-0.port: 8072
+      traefik.http.middlewares.odoo-ec-17-0-prod-buffering.buffering.retryExpression:
+        IsNetworkError() && Attempts() < 5
+      traefik.http.middlewares.odoo-ec-17-0-prod-compress.compress: "true"
+      traefik.http.middlewares.odoo-ec-17-0-prod-forbid-crawlers.headers.customResponseHeaders.X-Robots-Tag:
+        "noindex, nofollow"
+      traefik.http.middlewares.odoo-ec-17-0-prod-addSTS.headers.forceSTSHeader: "true"
+      traefik.http.middlewares.odoo-ec-17-0-prod-forceSecure.redirectScheme.scheme: https
+      traefik.http.middlewares.odoo-ec-17-0-prod-forceSecure.redirectScheme.permanent: "true"
+      traefik.http.services.odoo-ec-17-0-prod-main.loadbalancer.server.port: 8069
+      traefik.http.services.odoo-ec-17-0-prod-longpolling.loadbalancer.server.port: 8072
+      traefik.http.routers.odoo-ec-17-0-prod-main-0.rule: Host(`example.com`)
+      traefik.http.routers.odoo-ec-17-0-prod-main-0.service: odoo-ec-17-0-prod-main
+      traefik.http.routers.odoo-ec-17-0-prod-main-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
+        odoo-ec-17-0-prod-compress, odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-main-secure-0.rule: Host(`example.com`)
+      traefik.http.routers.odoo-ec-17-0-prod-main-secure-0.service: odoo-ec-17-0-prod-main
+      traefik.http.routers.odoo-ec-17-0-prod-main-secure-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
+        odoo-ec-17-0-prod-compress, odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-main-secure-0.tls: "true"
+      traefik.http.routers.odoo-ec-17-0-prod-main-secure-0.tls.certResolver: letsencrypt
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-0.rule:
+        Host(`example.com`) && Path(`/websocket`)
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-0.service: odoo-ec-17-0-prod-longpolling
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.rule:
+        Host(`example.com`) && Path(`/websocket`)
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.service: odoo-ec-17-0-prod-longpolling
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.tls: "true"
+      traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.tls.certResolver: letsencrypt
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.rule:
+        Host(`example.com`) && (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`,
+        `/website/info`))
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.service: odoo-ec-17-0-prod-main
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
+        odoo-ec-17-0-prod-compress, odoo-ec-17-0-prod-forbid-crawlers,
+        odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.rule:
+        Host(`example.com`) && (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`,
+        `/website/info`))
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.service: odoo-ec-17-0-prod-main
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.middlewares:
+        odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
+        odoo-ec-17-0-prod-compress, odoo-ec-17-0-prod-forbid-crawlers,
+        odoo-ec-17-0-prod-forceSecure
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.tls: "true"
+      traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.tls.certResolver: letsencrypt
+
+  db:
+    extends:
+      file: common.yaml
+      service: db
+    env_file:
+      - .docker/db-creation.env
+    restart: unless-stopped
+
+networks:
+  default:
+    driver_opts:
+      encrypted: 1
+
+  inverseproxy_shared:
+    external: true
+
+volumes:
+  filestore:
+  db:

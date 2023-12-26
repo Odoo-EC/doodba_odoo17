@@ -1,0 +1,47 @@
+version: "2.4"
+
+services:
+  odoo:
+    build:
+      context: ./odoo
+      args:
+        DB_VERSION: "15"
+        ODOO_VERSION: "17.0"
+        UID: "${UID:-1000}"
+        GID: "${GID:-1000}"
+        GIT_TOKEN: "${GIT_TOKEN}"
+    environment:
+      EMAIL_FROM: ""
+      PGDATABASE: &dbname odoo-ec
+      PGUSER: &dbuser "odoo"
+      PROXY_MODE: "true"
+      LIST_DB: "false"
+      DB_NAME: "${DB_NAME-odoo-ec}"
+      DB_MAXCONN: "${DB_MAXCONN-100}"
+      WORKERS: "${WORKERS-4}"
+      MAX_CRON_THREADS: "${MAX_CRON_THREADS-2}"
+      LIMIT_MEMORY_HARD: "${LIMIT_MEMORY_HARD-2684354560}"
+      LIMIT_MEMORY_SOFT: "${LIMIT_MEMORY_SOFT-2147483648}"
+      SERVER_WIDE_MODULES: "${SERVER_WIDE_MODULES-base,web}"
+    tty: true
+    volumes:
+      - filestore:/var/lib/odoo:z
+    labels:
+      traefik.backend.buffering.retryExpression: IsNetworkError() && Attempts() < 5
+      traefik.docker.network: "inverseproxy_shared"
+      traefik.frontend.passHostHeader: "true"
+      traefik.port: "8069"
+
+  db:
+    image: ghcr.io/tecnativa/postgres-autoconf:15-alpine
+    shm_size: 4gb
+    environment:
+      POSTGRES_DB: *dbname
+      POSTGRES_USER: *dbuser
+      CONF_EXTRA: |
+        work_mem = 512MB
+    volumes:
+      - db:/var/lib/postgresql/data:z
+
+  smtpfake:
+    image: docker.io/mailhog/mailhog

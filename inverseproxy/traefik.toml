@@ -1,0 +1,29 @@
+[global]
+  checkNewVersion = false
+  sendAnonymousUsage = false
+
+[api]
+  insecure = false
+
+[log]
+  level = "INFO"
+
+[providers]
+  [providers.file]
+    filename = "/etc/traefik/dynamic.toml"
+    watch = true
+  [providers.docker]
+    endpoint = "unix:///var/run/docker.sock"
+    exposedByDefault = false
+
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+  [entryPoints.websecure]
+    address = ":443"
+
+[certificatesResolvers.letsencrypt.acme]
+  email = "celm1990@gmail.com"
+  storage = "/etc/traefik/acme/acme.json"
+  [certificatesResolvers.letsencrypt.acme.httpChallenge]
+    entryPoint = "web"

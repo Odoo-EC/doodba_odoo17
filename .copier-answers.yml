@@ -1,0 +1,37 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v5.1.0-87-g4fd6241
+_src_path: gh:celm1990/doodba-copier-template
+backup_dst: ""
+cidr_whitelist: null
+domains_prod:
+  - hosts:
+      - example.com
+domains_test: null
+enable_traefik_dashboard: false
+gitlab_url: ""
+limit_memory_hard: 2684354560
+limit_memory_soft: 2147483648
+max_cron_threads: 2
+odoo_db_maxconn: 100
+odoo_db_name: odoo-ec
+odoo_dbfilter: odoo-ec
+odoo_initial_lang: es_EC
+odoo_listdb: false
+odoo_oci_image: ""
+odoo_proxy: traefik
+odoo_version: 17.0
+paths_without_crawlers:
+  - /web
+  - /website/info
+postgres_dbname: odoo-ec
+postgres_exposed: false
+postgres_username: odoo
+postgres_version: "15"
+project_author: Odoo-EC
+project_license: AGPL-3.0-or-later
+project_name: odoo-ec
+server_wide_modules: base,web
+smtp_default_from: ""
+smtp_relay_host: ""
+ssl_email: celm1990@gmail.com
+workers: 4

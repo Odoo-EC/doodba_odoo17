@@ -1,0 +1,52 @@
+version: "2.4"
+
+services:
+  proxy:
+    image: traefik:2.9
+    container_name: "traefik"
+    privileged: true
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    command:
+      - "--configfile=/etc/traefik/traefik.toml"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - acme:/etc/traefik/acme:rw,Z
+      - ./traefik.toml:/etc/traefik/traefik.toml:ro
+      - ./dynamic.toml:/etc/traefik/dynamic.toml:ro
+    restart: unless-stopped
+    networks:
+      shared:
+      private:
+      public:
+    depends_on:
+      - dockersocket
+  dockersocket:
+    image: tecnativa/docker-socket-proxy
+    privileged: true
+    networks:
+      private:
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      CONTAINERS: 1
+      NETWORKS: 1
+      SERVICES: 1
+      SWARM: 1
+      TASKS: 1
+    restart: unless-stopped
+
+networks:
+  public:
+  shared:
+    internal: true
+    driver_opts:
+      encrypted: 1
+  private:
+    internal: true
+    driver_opts:
+      encrypted: 1
+volumes:
+  acme:
