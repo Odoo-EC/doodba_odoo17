@@ -13,3 +13,7 @@ adheres to [Semantic Versioning](https://semver.org).
 - Odoo
 - OCA modules
 - l10-ecuador: modulo para localizacion Ecuatoriana
+
+## 2024-03-02
+
+- actualizar modulos OCA y server
