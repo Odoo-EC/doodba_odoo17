@@ -430,12 +430,14 @@
     - origin af694d92272be08e2bcf0943c3fa1637db61fee5
 ./payroll:
   defaults:
-    depth: $DEPTH_DEFAULT
+    depth: 1000
   remotes:
     origin: https://github.com/OCA/payroll.git
   target: origin $ODOO_VERSION
   merges:
     - origin 100544fd021df56d9a4629cc6d6699c265b8fe3b
+    - origin refs/pull/140/head
+    - origin refs/pull/142/head
 ./pms:
   defaults:
     depth: $DEPTH_DEFAULT
