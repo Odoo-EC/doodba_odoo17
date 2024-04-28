@@ -2,6 +2,7 @@ version: "2.4"
 
 services:
   odoo:
+    image: ghcr.io/odoo-ec/doodba_odoo17:17.0
     build:
       context: ./odoo
       args:
@@ -15,7 +16,7 @@ services:
       PGDATABASE: &dbname odoo-ec
       PGUSER: &dbuser "odoo"
       PROXY_MODE: "true"
-      LIST_DB: "false"
+      LIST_DB: "true"
       DB_NAME: "${DB_NAME-odoo-ec}"
       DB_MAXCONN: "${DB_MAXCONN-100}"
       WORKERS: "${WORKERS-4}"

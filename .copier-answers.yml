@@ -1,8 +1,9 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v5.1.0-87-g4fd6241
+_commit: v5.1.0-93-g2211fa7
 _src_path: gh:celm1990/doodba-copier-template
 backup_dst: ""
 cidr_whitelist: null
+docker_registry: ghcr.io
 domains_prod:
   - hosts:
       - example.com
@@ -16,13 +17,20 @@ odoo_db_maxconn: 100
 odoo_db_name: odoo-ec
 odoo_dbfilter: odoo-ec
 odoo_initial_lang: es_EC
-odoo_listdb: false
-odoo_oci_image: ""
+odoo_listdb: true
+odoo_oci_image: ghcr.io/odoo-ec/doodba_odoo17
 odoo_proxy: traefik
 odoo_version: 17.0
 paths_without_crawlers:
   - /web
   - /website/info
+pg_host: db
+pg_tune_conf: "CONF_EXTRA: |\n        max_connections = 100\n        shared_buffers\
+  \ = 768MB\n        effective_cache_size = 2304MB\n        maintenance_work_mem\
+  \ = 192MB\n        checkpoint_completion_target = 0.9\n        wal_buffers = 16MB\n\
+  \        default_statistics_target = 100\n        random_page_cost = 1.1\n   \
+  \     effective_io_concurrency = 200\n        work_mem = 3932kB\n        min_wal_size\
+  \ = 2GB\n        max_wal_size = 8GB\n        max_locks_per_transaction = 200"
 postgres_dbname: odoo-ec
 postgres_exposed: false
 postgres_username: odoo
