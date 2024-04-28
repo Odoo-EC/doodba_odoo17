@@ -18,3 +18,7 @@ adheres to [Semantic Versioning](https://semver.org).
 
 - actualizar modulos OCA y server
 - agregar repo de payroll
+
+## 2024-04-28
+
+- actualizar modulos OCA y server

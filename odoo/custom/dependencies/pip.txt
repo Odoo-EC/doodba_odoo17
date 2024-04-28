@@ -5,3 +5,5 @@ cryptography==36.0.0
 xades==0.2.4
 xmlsig==0.1.9
 zeep
+odoo_test_helper
+requests-mock==1.11.0
