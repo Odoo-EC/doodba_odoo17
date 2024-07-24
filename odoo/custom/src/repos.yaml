@@ -19,7 +19,7 @@
     origin: https://github.com/OCA/account-analytic.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 9d3858ac238a3ff07d3fdb0d686d02cba744ee0d
+    - origin a080cf49c889dd8dd18d79a09760105ed330b867
 ./account-budgeting:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -27,7 +27,7 @@
     origin: https://github.com/OCA/account-budgeting.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 526b2e5d4309da66fb123709a4741828ea06134c
+    - origin 7547644a4124edecfb46b0d6da00af43386ee022
 ./account-closing:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -35,7 +35,7 @@
     origin: https://github.com/OCA/account-closing.git
   target: origin $ODOO_VERSION
   merges:
-    - origin fee823e4d5238e88b483ef6bbaebd1e43109fb7f
+    - origin bb757b68a4ecdd28ce678e84e515e3583e208c09
 ./account-consolidation:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -43,7 +43,7 @@
     origin: https://github.com/OCA/account-consolidation.git
   target: origin $ODOO_VERSION
   merges:
-    - origin e8a8e87e4551055beb1874ea8ec4ab1fc0743833
+    - origin cf8cb385a0a81171364bffd3ced48cdb15221213
 ./account-financial-reporting:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -51,7 +51,7 @@
     origin: https://github.com/OCA/account-financial-reporting.git
   target: origin $ODOO_VERSION
   merges:
-    - origin f1a6648685e1793542e2b383b32dbb8f7f777bce
+    - origin 502954ddc19e66f7f6ea398369f69c7c4c85bcae
 ./account-financial-tools:
   defaults:
     depth: $DEPTH_MERGE
@@ -59,7 +59,7 @@
     origin: https://github.com/OCA/account-financial-tools.git
   target: origin $ODOO_VERSION
   merges:
-    - origin da87a0985bd583432efda926bb51d8c64a678913
+    - origin f562a28c0df0dbd9c8a86af67ae8c8bdb7c1ae91
 ./account-fiscal-rule:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -67,7 +67,7 @@
     origin: https://github.com/OCA/account-fiscal-rule.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 576e39b69f471fa5c69f421570887249892b6ba1
+    - origin e73b5ebd908b81413a2a1fcd4ff30bf871acf9f7
 ./account-invoice-reporting:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -75,7 +75,7 @@
     origin: https://github.com/OCA/account-invoice-reporting.git
   target: origin $ODOO_VERSION
   merges:
-    - origin d9d3f641900bbed55996a8c0921b6ec3a945de14
+    - origin 5ef09d11a5eb5abf053aca4d26169ffa8e1cc87c
 ./account-invoicing:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -83,7 +83,7 @@
     origin: https://github.com/OCA/account-invoicing.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2e93c379e9f9ff4be36e65c6aa79dec0667b6de3
+    - origin e71d945dd7e82f4b8336ef1ed76a2dc305557988
 ./account-payment:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -91,7 +91,7 @@
     origin: https://github.com/OCA/account-payment.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 613da67aa247cbbca9bc335fd65a4fc7cb0ec41c
+    - origin 828cd65dfb725fd825ae24686251c2d2a97f9923
 ./account-reconcile:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -99,7 +99,7 @@
     origin: https://github.com/OCA/account-reconcile.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 75772c7f6f76f8890b5c9ce267f84deb149f30c2
+    - origin 08fa883928493a4394443bf87d4ccd6bdddf95cc
 ./agreement:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -107,7 +107,7 @@
     origin: https://github.com/OCA/agreement.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 18d12a882e1d0bad085dcbb225dbf5229c1c224a
+    - origin d28e77e9a182b07a6628abb2060955f75c7855f7
 ./bank-payment:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -115,7 +115,7 @@
     origin: https://github.com/OCA/bank-payment.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2abb06a25e6c7419c0db8079237b203f59801db4
+    - origin 790941c3ea916e4ee759ece454786e728016c800
 ./bank-statement-import:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -123,7 +123,7 @@
     origin: https://github.com/OCA/bank-statement-import.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 7abba2b65721191f85f0e7ca3a018daec639bb3c
+    - origin fc75dc94774810c888bb043f263613702ed643ce
 ./brand:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -131,7 +131,7 @@
     origin: https://github.com/OCA/brand.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 33549187ad3a30588f7202f7516997c9e69801cc
+    - origin 1589852de24e61f889028c4fc1e9861c15593426
 ./business-requirement:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -139,7 +139,7 @@
     origin: https://github.com/OCA/business-requirement.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 0865c55d9dab8d4669c28516b0421d4425f92c90
+    - origin a8b3a913e4612180e57aa53fef0babe5834417a1
 ./calendar:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -147,7 +147,7 @@
     origin: https://github.com/OCA/calendar.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 53513d2e8498a1eeadcb4e517247323c6afdf48d
+    - origin 61ffed9a42eae81c10280612ea51f618a9787739
 ./commission:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -155,7 +155,7 @@
     origin: https://github.com/OCA/commission.git
   target: origin $ODOO_VERSION
   merges:
-    - origin ee4ff5767272ac040962fb3bf4755f7b46a84c59
+    - origin e82f4c6cdaea47d94c6a3fdd49d41ff50c6f2851
 ./contract:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -163,7 +163,7 @@
     origin: https://github.com/OCA/contract.git
   target: origin $ODOO_VERSION
   merges:
-    - origin bcf7bd7d0e18372461c0b8becb8987718aae880c
+    - origin 16ca332250909ab111aeb5344f7ad5cf05335a3e
 ./cooperative:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -171,7 +171,7 @@
     origin: https://github.com/OCA/cooperative.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 9cbf350b70f5a46dedffdb95478b35e3c136e72e
+    - origin baa595df5023763a72bb42497f4eff00c07a0ca8
 ./credit-control:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -179,7 +179,7 @@
     origin: https://github.com/OCA/credit-control.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 9cfc91634165d48e2176c20624cca0ac1ada60c0
+    - origin c97c7758a48582979bb3ebe29a9f5337e500d325
 ./crm:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -187,7 +187,7 @@
     origin: https://github.com/OCA/crm.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 5ff9a6b5610384b276a17e918ca84796ed34254e
+    - origin 896eab2c26f14fdece352975c0a61ef7d8688dd5
 ./currency:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -195,7 +195,7 @@
     origin: https://github.com/OCA/currency.git
   target: origin $ODOO_VERSION
   merges:
-    - origin cce06845814fee4274327a89f07626493b7f9412
+    - origin 968e46326e07f765d28c15c0585b1e8665289be3
 ./data-protection:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -203,7 +203,7 @@
     origin: https://github.com/OCA/data-protection.git
   target: origin $ODOO_VERSION
   merges:
-    - origin e1f77fca7b135c70277d5dd662b3e7a19c53d571
+    - origin a67f49787632bb93e6df4d5caafe2ee0c0ade84d
 ./ddmrp:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -211,7 +211,7 @@
     origin: https://github.com/OCA/ddmrp.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 5e780db6cc451adbf9ec9a1753a14140fca1fac8
+    - origin 63cfe4d071f5f21eb26e6805eda204de5fa45581
 ./delivery-carrier:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -219,7 +219,7 @@
     origin: https://github.com/OCA/delivery-carrier.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2fd577b2f3df33718b590a26cee309e07c488b66
+    - origin ba074840892b47cb031dd0c9a86b8f34a70950f9
 ./dms:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -227,7 +227,7 @@
     origin: https://github.com/OCA/dms.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 735caf179eb80e3ac6ba7df48e24a3d3d03d5dd7
+    - origin 6c87a75c20d05859a70c1d551c4e8a83cde3f117
 ./donation:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -235,7 +235,7 @@
     origin: https://github.com/OCA/donation.git
   target: origin $ODOO_VERSION
   merges:
-    - origin aa22e535870b337e343056c910874cf2764e396d
+    - origin 8d3c2aa9adbd02b82a5bb40a0493395fc1e0e1d1
 ./e-commerce:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -243,7 +243,7 @@
     origin: https://github.com/OCA/e-commerce.git
   target: origin $ODOO_VERSION
   merges:
-    - origin c34666ef470e9221cc1689177eae311dae6f086e
+    - origin 0b792cae8f05385603c565d6a3dbf2595b98d26c
 ./edi:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -251,7 +251,7 @@
     origin: https://github.com/OCA/edi.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 7d26584d35d79b3fd580b8072de7cf9a34cd1179
+    - origin d55c336cd77c5ff6560fe5a4c638bba74ad5e31d
 ./edi-framework:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -259,7 +259,7 @@
     origin: https://github.com/OCA/edi-framework.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 8c53a80b7cff7b98fc24e3fa56b8a15967486b2d
+    - origin 031525138191dc109635b423ad905e8f87b33d5e
 ./event:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -267,7 +267,7 @@
     origin: https://github.com/OCA/event.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 63dcbb4e1469d61fe5f8cc8001b75c7ec2d94916
+    - origin 865ea70aa2c02f79133de08f604e49d54d5aded8
 ./field-service:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -275,7 +275,7 @@
     origin: https://github.com/OCA/field-service.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 071d7007065d3b0f0ddfd0399bec37141f0df366
+    - origin a9cae0e8fcfb66789eee1dfb22bb83e5dae843cc
 ./fleet:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -283,7 +283,7 @@
     origin: https://github.com/OCA/fleet.git
   target: origin $ODOO_VERSION
   merges:
-    - origin bdf9f19216f61fb02c7baecd00d7fe6e18799db1
+    - origin 79d1086a4a42461619f047366b5c96ca62fa5e2a
 ./geospatial:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -291,7 +291,7 @@
     origin: https://github.com/OCA/geospatial.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 1dd8952a2ff6daa26f8441d8ebb7fd5325ecbe7f
+    - origin 76f9d017e20eb2dc5a92afe711d965f7ef9a23e8
 ./helpdesk:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -299,7 +299,7 @@
     origin: https://github.com/OCA/helpdesk.git
   target: origin $ODOO_VERSION
   merges:
-    - origin ae784bc4b505818d5cc377d90a8657f8eca90f36
+    - origin 2a4420de010e305d969007420e6fc15be77b8b16
 ./hr:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -307,7 +307,7 @@
     origin: https://github.com/OCA/hr.git
   target: origin $ODOO_VERSION
   merges:
-    - origin a549921f2716b3c123269d42d998c124a152f118
+    - origin 012b3f49522ef8f4dd1bbc496d3c616d1cee8c16
 ./hr-attendance:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -315,7 +315,7 @@
     origin: https://github.com/OCA/hr-attendance.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 1544e181891424bb49f40b59c826cc91f8ed8209
+    - origin b176a18451b3e2f100312d84b6a53744a733b2f5
 ./hr-expense:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -323,7 +323,7 @@
     origin: https://github.com/OCA/hr-expense.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 68dc80e18b0a497bff45af6fb48c23438bd4fa8e
+    - origin ad3da26545df0e9264ce79016425bed0bb9c9721
 ./hr-holidays:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -331,7 +331,7 @@
     origin: https://github.com/OCA/hr-holidays.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2601f2c9a71d3efaa174a0993aec3cf7462f7c27
+    - origin 5d5c2d906bd3860df09e480237734a22537ebe27
 ./iot:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -339,7 +339,7 @@
     origin: https://github.com/OCA/iot.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 28469c662fb54e58b5a9cefb1127f591ac23a900
+    - origin fa4bdd011273fe8465a63722a577235c1eb4123b
 ./knowledge:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -347,7 +347,7 @@
     origin: https://github.com/OCA/knowledge.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 17d250d76b51d5f70f6a3bf8b5f435a8802d1f4f
+    - origin 5c4ad10921df42a70e71789b3c302f8eb8982377
 ./maintenance:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -355,7 +355,7 @@
     origin: https://github.com/OCA/maintenance.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 87a3f888299377a81dc7d9f974cdfddc03f412f3
+    - origin 62919a7f84d372c84417fd7d1cd934fd0a336104
 ./management-system:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -371,7 +371,7 @@
     origin: https://github.com/OCA/manufacture.git
   target: origin $ODOO_VERSION
   merges:
-    - origin edbdaf8d1a9dbd5d1f3cc0d755b6252e7e714016
+    - origin 188a1d27582c8eba42ca835e038cb882c4d3582e
 ./manufacture-reporting:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -395,7 +395,7 @@
     origin: https://github.com/OCA/mis-builder.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 89cab3e54ea79f6e94d6602fa9c827bbd76e7d9f
+    - origin e9bee18594e3ad9d98aa79e6ea70dd6f42ed4055
 ./multi-company:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -403,7 +403,7 @@
     origin: https://github.com/OCA/multi-company.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 35a74603c6e7a3c0ecf34bb56a53be99cdbf462a
+    - origin 45527c340ef64413494a1841843078a98fb97e34
 ./odoo-pim:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -419,7 +419,7 @@
     origin: https://github.com/OCA/operating-unit.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2afdce6aaa4379e62a5c9abfc4be5ce801c5cc69
+    - origin 194201f3cfd77d8ccdf907e1cd0321c350d57861
 ./partner-contact:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -427,7 +427,7 @@
     origin: https://github.com/OCA/partner-contact.git
   target: origin $ODOO_VERSION
   merges:
-    - origin f9935b29b173c4c2de3143d541c9e60159910ac8
+    - origin fc814faf5a1dd154e4ed26bf98629f6c8f13157b
 ./payroll:
   defaults:
     depth: 1000
@@ -435,7 +435,7 @@
     origin: https://github.com/OCA/payroll.git
   target: origin $ODOO_VERSION
   merges:
-    - origin db27e160745dea9f6fdabf0132f7db844aaa2f76
+    - origin 0dae458a9899be6de72e0fb25a3f7adf3ca2dc7b
     - origin refs/pull/140/head
 ./pms:
   defaults:
@@ -460,7 +460,7 @@
     origin: https://github.com/OCA/product-attribute.git
   target: origin $ODOO_VERSION
   merges:
-    - origin aacb3a229a1149bd9577505c3935cd090dfe1e08
+    - origin a89100caa528e2d2c0b6b459ca00e735184a5e85
 ./product-configurator:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -484,7 +484,7 @@
     origin: https://github.com/OCA/product-pack.git
   target: origin $ODOO_VERSION
   merges:
-    - origin bb18bc4f13436519a5e3314a0aa5fa8c6da9ed8b
+    - origin 9036c062011aec8a68da90a06750726de5312239
 ./product-variant:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -492,7 +492,7 @@
     origin: https://github.com/OCA/product-variant.git
   target: origin $ODOO_VERSION
   merges:
-    - origin dc8f440b2ac29eeeda51f8e1a729ca40be089bad
+    - origin a1b76f5318b4a385776c1464a9de524b81a2b667
 ./project:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -500,7 +500,7 @@
     origin: https://github.com/OCA/project.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 8caa3f7c3ea313ccc3957cd6ce901808befa40b3
+    - origin 7efad5d4f2f374ed89e717214817d8845130a5b8
 ./project-reporting:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -524,7 +524,7 @@
     origin: https://github.com/OCA/purchase-workflow.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 294851dbb360811cba66113cbd27aecdf2cf0b32
+    - origin 0bccef01b8f6353c6d42b55b44105c49ec5b2ac6
 ./queue:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -532,7 +532,7 @@
     origin: https://github.com/OCA/queue.git
   target: origin $ODOO_VERSION
   merges:
-    - origin b9a8a104311fc560371d6b4f0fd7ea7d86c8e084
+    - origin 0c3fddf5e4d29e44dd6c4761ff8773a4bc4c8339
 ./repair:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -548,7 +548,7 @@
     origin: https://github.com/OCA/report-print-send.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2d74e1a3e39b5f7aaea9a4a98d0a5d4027f5e7de
+    - origin ab0e7d3f0e2caed1c2720731371cd72ea6300cf7
 ./reporting-engine:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -556,7 +556,7 @@
     origin: https://github.com/OCA/reporting-engine.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 0fcf20d8ecf860907123ebe6ff227913a45d921e
+    - origin 31daddfa438d1a5fc86c5222fd758cd578300ce2
 ./rest-api:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -572,7 +572,7 @@
     origin: https://github.com/OCA/rest-framework.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 475d57505949e408069a93081b8c3621a0d41a40
+    - origin 05113488899045f7e27defc817aa8c61e9d6381f
 ./rma:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -580,7 +580,7 @@
     origin: https://github.com/OCA/rma.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 21d508a8352eb8c1896d9198ceef2fe80774c6c0
+    - origin 2da6674b5b9a994912ebbd9e4d14a513949e978e
 ./role-policy:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -620,7 +620,7 @@
     origin: https://github.com/OCA/sale-reporting.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 57a89f8eb7270bd31d713e451eac50464ca34abf
+    - origin ba42520cbd82dfee1b22a50221e87e57d92a6b8b
 ./sale-workflow:
   defaults:
     depth: 500
@@ -628,7 +628,7 @@
     origin: https://github.com/OCA/sale-workflow.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2aa90555d94a1e460f9476a124cab404bd0983f2
+    - origin 6f623d151f8cbc5a7e23073fd53e0dfd5b128d25
 ./search-engine:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -644,7 +644,7 @@
     origin: https://github.com/OCA/server-auth.git
   target: origin $ODOO_VERSION
   merges:
-    - origin f1f442e2978902b08baf887ea78de0a281b995cb
+    - origin 58993c76e32690b6bdcae7f23e54270702220a3d
 ./server-backend:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -652,7 +652,7 @@
     origin: https://github.com/OCA/server-backend.git
   target: origin $ODOO_VERSION
   merges:
-    - origin b6f58742cada2204d218f23f1aa48290abe67e74
+    - origin 8296728be9fc7a3014c0abc1fe2e58badae28bf8
 ./server-brand:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -660,7 +660,7 @@
     origin: https://github.com/OCA/server-brand.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 1d7518186a747974b10278eda5d9f7c3c2a0edd1
+    - origin d28d76399e15e047474ce3df49f9dce5795cbdd7
 ./server-env:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -668,7 +668,7 @@
     origin: https://github.com/OCA/server-env.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 8292b251f8b02a7106595f323bc5d212bd532a69
+    - origin 759299b78d7c43b1296cea3b2aa8872b684a1295
 ./server-tools:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -676,7 +676,7 @@
     origin: https://github.com/OCA/server-tools.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 33d7a8ea23346c0cf8ec7f41b50e1c0188e151d3
+    - origin d5dca9219bc88705af82e87d5694afe8fbc2d1b4
 ./server-ux:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -684,7 +684,7 @@
     origin: https://github.com/OCA/server-ux.git
   target: origin $ODOO_VERSION
   merges:
-    - origin bffa10334abab4e05c3b12fcbdd2c019eea7c443
+    - origin b69246f657643e742dd0e75b0ade093cc0849cd8
 ./sign:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -700,7 +700,7 @@
     origin: https://github.com/OCA/social.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 9a6a0dfa2c7e459a448b83605db4177d4335f7d2
+    - origin 98e6818e756cc2aacdda5b9f39c0d25ae2ea2203
 ./spreadsheet:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -724,7 +724,7 @@
     origin: https://github.com/OCA/stock-logistics-barcode.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 487f75b15d0a74500abaf995001d5058ca04a82e
+    - origin 68ee8c9b3238a3b1260f37e75ec5ddba6b43b2ec
 ./stock-logistics-orderpoint:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -740,7 +740,7 @@
     origin: https://github.com/OCA/stock-logistics-reporting.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 30f3b887f29beb344c6fc310150983f2ceb97d55
+    - origin 6518e01e19a950b1634984bb675f636d6b966277
 ./stock-logistics-request:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -748,7 +748,7 @@
     origin: https://github.com/OCA/stock-logistics-request.git
   target: origin $ODOO_VERSION
   merges:
-    - origin d43085391850c1c8f35aed80f983c7f55c2cb43e
+    - origin e98fca5123d74230aa7adcb0cb536fe58cccd3fc
 ./stock-logistics-tracking:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -772,7 +772,7 @@
     origin: https://github.com/OCA/stock-logistics-warehouse.git
   target: origin $ODOO_VERSION
   merges:
-    - origin ba32878a13079aef1287913cd2653d19c4395a82
+    - origin 52f4bfa87e0ea50ae6fedc6432ce37c5f8c85f7b
 ./stock-logistics-workflow:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -780,7 +780,7 @@
     origin: https://github.com/OCA/stock-logistics-workflow.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 71a56481c330bb1ef732dc1ded56936d94609bb4
+    - origin 5c6b632832a0da3b8f81c1f4ba06ff89e36e6034
 ./storage:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -788,7 +788,7 @@
     origin: https://github.com/OCA/storage.git
   target: origin $ODOO_VERSION
   merges:
-    - origin c3f7e3baf0e0ce47ec2ffbc02df9865e0bf534bb
+    - origin 5fe0c4268f1517499289c468fb3f6c1fe42ccead
 ./survey:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -796,7 +796,7 @@
     origin: https://github.com/OCA/survey.git
   target: origin $ODOO_VERSION
   merges:
-    - origin e58c002992e745ea3e69218631088d909ae273f6
+    - origin 96d2f4d55e49aa2c928a2101f839c455e5a6950a
 ./timesheet:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -804,7 +804,7 @@
     origin: https://github.com/OCA/timesheet.git
   target: origin $ODOO_VERSION
   merges:
-    - origin d33e4b2ceeaa1eeae244b141ed7bedd7ea07331f
+    - origin 71385e1373030486ed05088d500a32a8fb57b31a
 ./vertical-rental:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -828,7 +828,7 @@
     origin: https://github.com/OCA/web.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 2a130761bd4a4e1879330db9f3a54e9309171600
+    - origin ab9e6ba030319112422a0babeac170da551fe448
 ./web-api:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -868,7 +868,7 @@
     origin: https://github.com/OCA/wms.git
   target: origin $ODOO_VERSION
   merges:
-    - origin 74cb5e062570130502e0eda2592e632b477dc3b9
+    - origin 007455829ef4c765641b71cf129328bb548403b2
 ./l10n-ecuador:
   defaults:
     depth: $DEPTH_MERGE
@@ -876,7 +876,6 @@
     origin: https://github.com/OCA/l10n-ecuador.git
   target: origin $ODOO_VERSION
   merges:
-    - origin a60afcc599f9a3ff42415e00bf4b4c0dbdc8ca05
-    - origin refs/pull/57/head
+    - origin 383639483779a0af619f8f3922c3545c342737ec
     - origin refs/pull/58/head
-    - origin refs/pull/67/head
+    - origin refs/pull/69/head

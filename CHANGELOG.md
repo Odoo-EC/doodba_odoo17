@@ -26,3 +26,7 @@ adheres to [Semantic Versioning](https://semver.org).
 ## 2024-05-21
 
 - actualizar modulos OCA y server
+
+## 2024-07-23
+
+- actualizar modulos OCA y server
