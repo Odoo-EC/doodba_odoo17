@@ -2,7 +2,7 @@ version: "2.4"
 
 services:
   odoo:
-    image: ghcr.io/odoo-ec/doodba_odoo17:17.0
+    image: ghcr.io/odoo-ec/doodba_odoo17:odoo-ec-17.0
     build:
       context: ./odoo
       args:

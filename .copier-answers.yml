@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v5.1.0-93-g2211fa7
+_commit: v5.1.0-142-g13e2b11
 _src_path: gh:celm1990/doodba-copier-template
 backup_dst: ""
 cidr_whitelist: null
@@ -42,4 +42,5 @@ server_wide_modules: base,web
 smtp_default_from: ""
 smtp_relay_host: ""
 ssl_email: celm1990@gmail.com
+traefik_version: 3
 workers: 4

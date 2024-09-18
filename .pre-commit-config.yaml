@@ -23,7 +23,7 @@ repos:
         files: "\\.rej$"
   - &maintainer_tools
     repo: https://github.com/oca/maintainer-tools
-    rev: 1070863d1298b1bf373a0e69458dd8a88ab91578
+    rev: 400ffa99242c8b225ab4d34de78721a68b292a61
     hooks:
       # update the NOT INSTALLABLE ADDONS section above
       - id: oca-update-pre-commit-excluded-addons
@@ -43,14 +43,16 @@ repos:
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.2
+    # HACK https://github.com/prettier/prettier/issues/15696
+    rev: v2.7.1
     hooks:
       - id: prettier
         name: prettier + plugin-xml
+        args: [--plugin=@prettier/plugin-xml]
         additional_dependencies:
           # HACK https://github.com/prettier/pre-commit/issues/16#issuecomment-713474520
-          - prettier@3.0.2
-          - "@prettier/plugin-xml@v3.2.0"
+          - prettier@2.7.1
+          - "@prettier/plugin-xml@v2.2.0"
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -97,6 +99,8 @@ repos:
           - --addons-dir=odoo/custom/src/private
           - --org-name=Odoo-EC
           - --repo-name=odoo-ec
+          - --convert-fragments-to-markdown
           - --gen-html
+          - --if-fragments-changed
           - --branch=17.0
           - --template-filename=.module-readme.rst.j2
