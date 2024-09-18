@@ -2,34 +2,48 @@ version: "2.4"
 
 services:
   proxy:
-    image: traefik:2.9
+    image: traefik:3.1.0
     container_name: "traefik"
-    privileged: true
-    tty: true
-    ports:
-      - "80:80"
-      - "443:443"
-    command:
-      - "--configfile=/etc/traefik/traefik.toml"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - acme:/etc/traefik/acme:rw,Z
-      - ./traefik.toml:/etc/traefik/traefik.toml:ro
-      - ./dynamic.toml:/etc/traefik/dynamic.toml:ro
-    restart: unless-stopped
     networks:
       shared:
+        aliases: []
       private:
       public:
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - acme:/etc/traefik/acme:rw,Z
     depends_on:
       - dockersocket
+    restart: unless-stopped
+    tty: true
+    command:
+      - "--log.level=info"
+      - "--api.insecure=false"
+      - "--global.checkNewVersion=false"
+      - "--global.sendAnonymousUsage=false"
+      - "--providers.docker.endpoint=http://dockersocket:2375"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=inverseproxy_shared"
+      - "--providers.docker=true"
+      - "--entrypoints.web-insecure.address=:80"
+      - "--entrypoints.web-insecure.http.redirections.entryPoint.to=web-main"
+      - "--entrypoints.web-insecure.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web-main.address=:443"
+      - "--entrypoints.web-main.transport.respondingTimeouts.idleTimeout=60s"
+      - "--entrypoints.web-main.http.tls.certResolver=letsencrypt"
+      - "--certificatesresolvers.letsencrypt.acme.caserver=https://acme-v02.api.letsencrypt.org/directory"
+      - "--certificatesresolvers.letsencrypt.acme.email=celm1990@gmail.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/etc/traefik/acme/acme.json"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web-insecure"
   dockersocket:
     image: tecnativa/docker-socket-proxy
     privileged: true
     networks:
       private:
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
     environment:
       CONTAINERS: 1
       NETWORKS: 1
@@ -40,6 +54,8 @@ services:
 
 networks:
   public:
+    driver_opts:
+      encrypted: 1
   shared:
     internal: true
     driver_opts:

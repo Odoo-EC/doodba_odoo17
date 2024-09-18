@@ -25,9 +25,12 @@ services:
       traefik.domain: "example.com"
       traefik.forbiddenCrawlers-0.frontend.headers.customResponseHeaders:
         "X-Robots-Tag:noindex, nofollow"
-      traefik.forbiddenCrawlers-0.frontend.rule: Host:example.com;Path:/web,/web/{anything:.*},/website/info,/website/info/{anything:.*}
-      traefik.main-0.frontend.rule: Host:example.com
-      traefik.longpolling-0.frontend.rule: Host:example.com;Path:/websocket,/websocket/{anything:.*}
+      traefik.forbiddenCrawlers-0.frontend.rule:
+        Host(`example.com`) && (PathPrefix(`/web`) || Path(`/web`) ||
+        PathPrefix(`/website/info`) || Path(`/website/info`))
+      traefik.main-0.frontend.rule: Host(`example.com`)
+      traefik.longpolling-0.frontend.rule:
+        Host(`example.com`) && (PathPrefix(`/websocket`) || Path(`/websocket`))
       traefik.longpolling-0.port: 8072
       traefik.http.middlewares.odoo-ec-17-0-prod-buffering.buffering.retryExpression:
         IsNetworkError() && Attempts() < 5
@@ -64,16 +67,16 @@ services:
       traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.tls: "true"
       traefik.http.routers.odoo-ec-17-0-prod-longpolling-secure-0.tls.certResolver: letsencrypt
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.rule:
-        Host(`example.com`) && (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`,
-        `/website/info`))
+        Host(`example.com`) && (PathPrefix(`/web/`) || PathPrefix(`/website/info/`) ||
+        Path(`/web`) || Path(`/website/info`))
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.service: odoo-ec-17-0-prod-main
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-0.middlewares:
         odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
         odoo-ec-17-0-prod-compress, odoo-ec-17-0-prod-forbid-crawlers,
         odoo-ec-17-0-prod-forceSecure
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.rule:
-        Host(`example.com`) && (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`,
-        `/website/info`))
+        Host(`example.com`) && (PathPrefix(`/web/`) || PathPrefix(`/website/info/`) ||
+        Path(`/web`) || Path(`/website/info`))
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.service: odoo-ec-17-0-prod-main
       traefik.http.routers.odoo-ec-17-0-prod-forbiddenCrawlers-secure-0.middlewares:
         odoo-ec-17-0-prod-addSTS, odoo-ec-17-0-prod-buffering,
